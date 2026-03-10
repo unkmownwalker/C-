@@ -8,7 +8,7 @@ int divide_and_conquer(int a[],int left,int right)    //最大子数组的分治
    int left_max=divide_and_conquer(a,left,mid);
    int right_max=divide_and_conquer(a,mid+1,right);
     
-   int left_sum=-9999,right_sum=-9999,cur1=0,cur2=0;
+   int left_sum=INT_MIN,right_sum=INT_MIN,cur1=0,cur2=0;
    for(int i=mid;i>=left;i--)
    {
       cur1+=a[i];
@@ -34,6 +34,7 @@ int main()
    cout<<maxarray;
    return 0;
 }
+
 
 
 
